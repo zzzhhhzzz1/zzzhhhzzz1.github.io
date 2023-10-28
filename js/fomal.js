@@ -3174,7 +3174,7 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/dm14.webp);
+    --default-bg: url(https://t.mwm.moe/fj/);
   }`;
 }
 // 切换背景主函数
@@ -3188,9 +3188,6 @@ function changeBg(s) {
 function setBg(s) {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: ${s};
-    --darkmode-bg: ${s};
-    --mobileday-bg: ${s};
-    --mobilenight-bg: ${s};
   }`;
 }
 
