@@ -73,7 +73,7 @@ $.ajax({
   type: 'get',
   url: 'https://apis.map.qq.com/ws/location/v1/ip',
   data: {
-    key: '',  // 这里要写你的KEY!!!
+    key: 'MGCBZ-XKACN-KRYFO-S4SMX-5QUU3-R5FC5',  // 这里要写你的KEY!!!
     output: 'jsonp',
   },
   dataType: 'jsonp',
@@ -99,7 +99,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-  let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+  let dist = getDistance(113.0441038749008, 28.24870212357, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
   let pos = ipLoacation.result.ad_info.nation;
   let ip;
   let posdesc;
@@ -2789,7 +2789,7 @@ function createtime() {
   var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   var unit = (dis / 149600000).toFixed(6);  // 天文单位
   // 网站诞生时间
-  var grt = new Date("08/09/2022 00:00:00");
+  var grt = new Date("08/09/2023 00:00:00");
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
@@ -3175,6 +3175,9 @@ if (localStorage.getItem("blogbg") != undefined) {
 } else {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: url(https://t.mwm.moe/fj/);
+    --darkmode-bg: url(https://t.mwm.moe/fj/);
+    --mobileday-bg: url(https://t.mwm.moe/fj/);
+    --mobilenight-bg: url(https://t.mwm.moe/fj/);
   }`;
 }
 // 切换背景主函数
@@ -3188,6 +3191,9 @@ function changeBg(s) {
 function setBg(s) {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: ${s};
+    --darkmode-bg: ${s};
+    --mobileday-bg: ${s};
+    --mobilenight-bg: ${s};
   }`;
 }
 
